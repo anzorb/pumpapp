@@ -1,0 +1,31 @@
+@import '../media-queries.scss';
+
+.camera-roll {
+  flex: 1;
+  display: flex;
+}
+
+.camera-roll__photo {
+  box-sizing: border-box;
+  width: calc(33.33% - 1px);
+  @include device-large {
+    width: calc(20% - 1px);
+  }
+  @include device-medium {
+    width: calc(25% - 1px);
+  }
+  @include device-xsmall {
+    width: calc(50% - 1px);
+  }
+  float: left;
+  background-position: 50% 50%;
+  background-size: cover;
+  border: 1px solid white;
+}
+
+/* responsive squares ;) */
+.camera-roll__photo:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}

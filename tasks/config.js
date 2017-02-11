@@ -1,10 +1,9 @@
 module.exports = {
-    dist: './dist',
-    demo: './demo',
-    outputName: 'side-menu',
-    entryPoint: './src/SideMenu.jsx',
-    entryPointDev: './src/index.jsx',
+    dist: './www',
+    demo: './www',
+    outputName: 'pumpup',
+    entryPoint: './src/index.jsx',
     src: './src',
     docs: './docs',
-    appName: 'SideMenu'
+    appName: 'PumpUp'
 };

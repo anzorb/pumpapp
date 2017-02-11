@@ -13,20 +13,12 @@ module.exports = {
             include: /(src)/,
             use: 'babel-loader',
         }, {
-            test: /\.(png|jpg)$/,
-            include: /(src)/,
-            use: {
-                loader: 'url',
-                query: {
-                    limit: 5000000
-                }
-            }
-        }, {
             test: /\.scss$/,
             include: /(src)/,
             use: ['style-loader', 'css-loader', 'sass-loader', 'postcss-loader']
         }]
     },
+    entry: ['es6-promise/auto', 'isomorphic-fetch', config.entryPoint],
     resolve: {
         extensions: ['.js', '.jsx']
     }

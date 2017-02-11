@@ -1,0 +1,65 @@
+@import '../media-queries.scss';
+
+.photo-carousel {
+  height: 445px;
+}
+
+.photo-carousel__container {
+  position: relative;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.photo-carousel__photos {
+  position: absolute;
+  height: 100%;
+  will-change: transform;
+
+  transition: transform 150ms ease-out;
+  &.photo-carousel__photos--moving {
+    transition: transform 0ms linear;
+  }
+}
+
+.photo-carousel__photo {
+  user-select: none;
+  cursor: grab;
+  border: 1px solid white;
+  align-content: center;
+  justify-content: center;
+  float: left;
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.photo-carousel__photo__content {
+  box-sizing: border-box;
+  align-self: center;
+  max-width: 100%;
+}
+
+.photo-carousel__pagination {
+  height: 50px;
+}
+
+.photo-carousel__page {
+  width: 20px;
+  height: 20px;
+  background: #dddddd;
+  border-radius: 20px;
+  margin: 15px;
+  cursor: pointer;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "";
+    top: -10px;
+    bottom: -10px;
+    left: -10px;
+    right: -10px;
+  }
+  &.active {
+    background: #333333;
+  }
+}

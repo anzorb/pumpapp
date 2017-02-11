@@ -1,0 +1,29 @@
+@mixin device-large {
+    @media only screen and (min-width: 73.14286em) {
+        @content;
+    }
+}
+
+@mixin device-medium {
+    @media only screen and (min-width: 49.71429em) and (max-width: 73.14286em) {
+        @content;
+    }
+}
+
+@mixin device-small {
+    @media only screen and (min-width: 20em) and (max-width: 49.71429em) {
+        @content;
+    }
+}
+
+@mixin device-xsmall {
+    @media only screen and (max-width: 19em) {
+        @content;
+    }
+}
+
+@mixin device-short {
+    @media only screen and (max-height: 34.375em) {
+        @content;
+    }
+}

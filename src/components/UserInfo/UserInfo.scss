@@ -1,0 +1,40 @@
+@import '../media-queries.scss';
+
+.user-info__header {
+  border-bottom: 1px solid #AAA;
+  padding: 1em;
+}
+
+.user-info__avatar {
+  width: 150px;
+  height: 150px;
+  @include device-small {
+    width: 100px;
+    height: 100px;
+  }
+  border-radius: 250px;
+  background-color: #dddddd;
+  background-size: cover;
+}
+
+.user-info__about {
+  padding: 1em;
+}
+
+/* shell styles */
+
+.user-info__name:empty {
+  background-color: #dddddd;
+  width: 100%;
+  height: 1em;
+}
+
+.user-info__bio:empty {
+  background-color: #dddddd;
+  width: 100%;
+  height: 3em;
+}
+
+.user-info__bio {
+  line-height: 1em;
+}
